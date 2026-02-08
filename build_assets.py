@@ -108,7 +108,7 @@ def build_all_assets():
                 
                 # Draw white contours
                 contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-                cv2.drawContours(ghost_masked, contours, -1, (255, 255, 255), 2)
+                cv2.drawContours(ghost_masked, contours, -1, (255, 255, 255), 2) #
                 
                 # Save Ghost Image
                 cv2.imwrite(f"{output_dir}/ghost_{i}.png", ghost_masked)
